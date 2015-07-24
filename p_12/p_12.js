@@ -11,7 +11,7 @@ rl.on('line', function(line) {
 
 
 // computing takes a super long time
-// needs a better algorithm, but what? 
+// needs a better algorithm, but what?
 
 function getFactors(n){
 
@@ -21,16 +21,12 @@ y = n*x/2;
 
 var factors = [],
 
-q = 0;
-
 for(var i = 1; i<= y; i++){
-  q = y/i;
+  // q = y/i;
 
-  if(q === Math.floor(q)){
+  if(y % i == 0){
     factors.push(i);
   }
-
 }
-return factors.length;
-
+return factors;
 }
